@@ -1,5 +1,4 @@
 node default  {
-  include pythonbrasil
 }
 
 node "puppet1.tracy.com.br" inherits default { # MySQL

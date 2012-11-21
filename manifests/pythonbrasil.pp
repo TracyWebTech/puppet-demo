@@ -6,7 +6,7 @@ class pythonbrasil {
   }
 }
 
-class pythonbrasil::bd {
+class pythonbrasil::bd inherits pythonbrasil {
   include mysql
   include mysql::server
 
@@ -30,7 +30,7 @@ class pythonbrasil::bd {
   }
 }
 
-class pythonbrasil::site {
+class pythonbrasil::site inherits pythonbrasil {
   include nginx
   include mysql
   include mysql::python
@@ -60,7 +60,7 @@ class pythonbrasil::site {
 
 }
 
-class pythonbrasil::proxy($backends) {
+class pythonbrasil::proxy($backends) inherits pythonbrasil {
   include nginx
 
   nginx::site { 'pythonbrasil-proxy':
