@@ -1,4 +1,5 @@
 node default  {
+  import "pythonbrasil"
 }
 
 node "puppet1.tracy.com.br" inherits default { # MySQL
