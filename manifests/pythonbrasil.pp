@@ -32,8 +32,6 @@ class pythonbrasil::bd inherits pythonbrasil {
 
 class pythonbrasil::site inherits pythonbrasil {
   include nginx
-  include mysql
-  include mysql::python
   include django
   include pythonbrasil_django_requirements
 
