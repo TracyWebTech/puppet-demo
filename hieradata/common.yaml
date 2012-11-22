@@ -1,3 +1,4 @@
 ---
 pythonbrasil::users:    
-    pythonbrasil: a
+    pythonbrasil: 
+        ensure: present

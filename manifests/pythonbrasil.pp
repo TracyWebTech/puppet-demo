@@ -1,12 +1,11 @@
 class pythonbrasil ($users) {
 
   $users_default = {
-    ensure     => present,
     managehome => true,
     shell      => '/bin/bash'
   }
   create_resources(user, $users, $users_default)
-  
+
 }
 
 class pythonbrasil::bd ($mysql_settings = {}) inherits pythonbrasil {
