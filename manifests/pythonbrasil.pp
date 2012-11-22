@@ -6,19 +6,11 @@ class pythonbrasil {
   }
 }
 
-class pythonbrasil::bd inherits pythonbrasil {
+class pythonbrasil::bd ($config = {}) inherits pythonbrasil {
   include mysql
-  include mysql::server
 
-  $mysql_settings = {
-    'mysqld' => {
-      'bind-address' => '0.0.0.0'
-    }
-  }
-  
-  mysql::server::config { 'default':
-    settings => $mysql_settings,
-    require  => Class['mysql::server']
+  class { 'mysql::server': 
+    config_hash => $config
   }
 
   mysql::db { 'pythonbrasil':
