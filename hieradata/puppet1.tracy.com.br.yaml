@@ -1,5 +1,5 @@
 ---
-pythonbrasil::bd::config:
+pythonbrasil::bd::mysql_settings:
     mysqld:
         bind-address: 0.0.0.0
         query_cache_limit: 8M
